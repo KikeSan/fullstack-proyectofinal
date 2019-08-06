@@ -15,3 +15,8 @@ body:after{
   /* background: url(https://angular.io/assets/images/logos/angular/angular_whiteTransparent_withMargin.png) top 0 left 0/320px auto,
   url(https://angular.io/assets/images/logos/angular/angular_whiteTransparent_withMargin.png) top 80px left 160px/320px auto; */
 }
+
+.btn-primary{
+	background-color: #dd0031!important;
+	border: 0!important;
+}

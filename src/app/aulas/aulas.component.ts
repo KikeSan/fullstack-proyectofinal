@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-aulas',
   templateUrl: './aulas.component.html',
-  styleUrls: ['./aulas.component.css']
+  styleUrls: ['./aulas.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AulasComponent implements OnInit {
 
