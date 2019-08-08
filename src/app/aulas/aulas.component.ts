@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { AulasService } from '../aulas.service';
+import { IAula } from '../i-aula';
 
 @Component({
   selector: 'app-aulas',
@@ -7,11 +9,16 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AulasComponent implements OnInit {
+  aulas: Array<IAula>
 
-  constructor() { }
-  @Input() aulasArreglo: Array<string>
+  constructor(private aulasService:AulasService) { }
+  /* @Input() aulasArreglo: Array<string> */
+
 
   ngOnInit() {
+  }
+  listar(){
+    this.aulas = this.aulasService.listar()
   }
 
 }

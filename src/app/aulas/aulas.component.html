@@ -2,10 +2,15 @@
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 login-wrapper">
 <h2>Aulas Disponibles</h2>
+<button class="btn btn-primary verListado" (click)="listar()">Ver listado</button>
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action" *ngFor="let aula of aulasArreglo; let indice = index">
-    {{indice+1}}: {{aula}}
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let aula of aulas; let indice = index">
+    {{indice+1}}: {{aula.nombre}}
+    <p class="subtitle">Pabellón: {{aula.pabellon}}</p>
   </a>
+  <!-- <a href="#" class="list-group-item list-group-item-action" *ngFor="let aula of aulasArreglo; let indice = index">
+    {{indice+1}}: {{aula}}
+  </a> -->
 </div>
 <!-- <ul>
   <li *ngFor="let aula of aulasArreglo; let indice = index">

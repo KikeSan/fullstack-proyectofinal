@@ -1,3 +1,4 @@
 <app-login *ngIf="!logueado" (onLogged)="validar($event)"></app-login>
 <app-header *ngIf="logueado" (closeSession)="validar($event)"></app-header>
-<app-aulas *ngIf="logueado" [aulasArreglo]="aulas"></app-aulas>
+<!-- <app-aulas *ngIf="logueado" [aulasArreglo]="aulas"></app-aulas> -->
+<app-aulas *ngIf="logueado"></app-aulas>

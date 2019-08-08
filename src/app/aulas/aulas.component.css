@@ -16,3 +16,14 @@ ul{
 /* body{
   background: whitesmoke !important;
 } */
+.verListado{
+  margin-bottom: 15px;
+}
+.list-group-item{
+      padding: 0.5rem 1rem;
+}
+.subtitle{
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}

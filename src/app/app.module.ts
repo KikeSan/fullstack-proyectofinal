@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AulasComponent } from './aulas/aulas.component';
 import { HeaderComponent } from './header/header.component';
+import { LogService } from './log.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
