@@ -2,7 +2,7 @@
     <div class="row align-items-center">
       <div class="col-md-4 offset-md-4 login-wrapper">
 <h1 class="text-center">Login</h1>
-<!-- <form> -->
+<form #formulario="ngForm" (ngSubmit)="registrar(formulario)">
 	<div class="form-group">
 		<label for="exampleInputEmail1">Correo</label>
 		<div class="input-group mb-3">
@@ -21,8 +21,9 @@
 			<input type="password" class="form-control" placeholder="" aria-label="Password" aria-describedby="basic-addon2">
 		</div>
 	</div>
-	<button class="btn btn-primary" (click)="loguearse()">Ingresar</button>
-<!-- </form> -->
+	<button class="btn btn-primary">Ingresar</button>
+	<!-- <button class="btn btn-primary" (click)="loguearse()">Ingresar</button> -->
+</form>
       </div>
     </div>
   </div>
