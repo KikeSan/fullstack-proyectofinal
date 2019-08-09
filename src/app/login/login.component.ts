@@ -1,10 +1,11 @@
-import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
   @ViewChild("formulario",{static:true}) f:NgForm
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
       console.log(this.f.form.getRawValue());
       console.log('Valido');
       this.f.form.reset()
+      this.loguearse()
     }else{
       console.log('InValido');
     }
