@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -16,6 +16,17 @@ export class LoginComponent implements OnInit {
   }
   loguearse(){
     this.onLogged.emit(true)
+  }
+
+  registrar(){
+    if(this.f.valid){
+      console.log(this.f.value);
+      console.log(this.f.form.getRawValue());
+      console.log('Valido');
+      this.f.form.reset()
+    }else{
+      console.log('InValido');
+    }
   }
 
 }

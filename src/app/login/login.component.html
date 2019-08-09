@@ -9,7 +9,9 @@
 			<div class="input-group-prepend">
 				<span class="input-group-text" id="basic-addon1">@</span>
 			</div>
-			<input type="text" class="form-control" placeholder="Ingrese email" aria-label="Username" aria-describedby="basic-addon1">
+			<input type="text" class="form-control" placeholder="Ingrese email" aria-label="Username" aria-describedby="basic-addon1" ngModel name="correo" required email #correo="ngModel">
+      <span *ngIf="correo.invalid && correo.touched && correo.errors.required">El correo es obligatorio</span>
+      <span *ngIf="correo.invalid && correo.touched && correo.errors.email">Formato inválido</span>
 		</div>
 	</div>
 	<div class="form-group">
@@ -18,10 +20,11 @@
 			<div class="input-group-prepend">
 				<span class="input-group-text" id="basic-addon2">@</span>
 			</div>
-			<input type="password" class="form-control" placeholder="" aria-label="Password" aria-describedby="basic-addon2">
+			<input type="password" class="form-control" placeholder="" aria-label="Password" aria-describedby="basic-addon2" ngModel name="password" required #password="ngModel">
+      <span *ngIf="password.invalid && password.touched ">La contraseña es obligatoria</span>
 		</div>
 	</div>
-	<button class="btn btn-primary">Ingresar</button>
+	<button class="btn btn-primary" [disabled]="formulario.invalid">Ingresar</button>
 	<!-- <button class="btn btn-primary" (click)="loguearse()">Ingresar</button> -->
 </form>
       </div>
