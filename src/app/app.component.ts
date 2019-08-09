@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   logueado: boolean = false
-  aulas: Array<string> = ["Aula A", 'Aula C', "Aula F", "Aula G", "Aula H", "Aula J", "Laboratorio 3", "Aula L", "Laboratorio 5", "Sala Principal"]
+  //aulas: Array<string> = ["Aula A", 'Aula C', "Aula F", "Aula G", "Aula H", "Aula J", "Laboratorio 3", "Aula L", "Laboratorio 5", "Sala Principal"]
 
   validar(valor) {
     this.logueado = valor

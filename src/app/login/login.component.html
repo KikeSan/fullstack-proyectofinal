@@ -24,6 +24,12 @@
       <span *ngIf="password.invalid && password.touched ">La contraseña es obligatoria</span>
 		</div>
 	</div>
+  <a class="button">
+    <span class="icon">
+      <i class="fab fa-github"></i>
+    </span>
+    <span>GitHub</span>
+  </a>
 	<button class="btn btn-primary" [disabled]="formulario.invalid">Ingresar</button>
 	<!-- <button class="btn btn-primary" (click)="loguearse()">Ingresar</button> -->
 </form>
