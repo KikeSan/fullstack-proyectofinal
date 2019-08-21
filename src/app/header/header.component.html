@@ -1,6 +1,27 @@
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">LOGO</a>
-  <div class="form-inline">
-    <button class="btn btn-primary my-2 my-sm-0" (click)="cerrar()">Cerrar Sesión</button>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      LOGO
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <button class="btn btn-primary" (click)="cerrar()">Cerrar Sesión</button>
+        </div>
+      </div>
+    </div>
   </div>
 </nav>
